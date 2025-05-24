@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog dengan Komentar Tersembunyi</title>
+  <style>
+    #komentar {
+      display: none;
+      margin-top: 10px;
+      border-top: 1px solid #ccc;
+      padding-top: 10px;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Artikel Blog</h1>
+  <p>Ini adalah isi dari artikel blog yang sangat menarik dan informatif.</p>
+
+  <button id="tombolKomentar">Tampilkan Komentar</button>
+
+  <div id="komentar">
+    <p><strong>Ani:</strong> Artikel yang sangat membantu!</p>
+    <p><strong>Budi:</strong> Terima kasih atas informasinya.</p>
+  </div>
+
+  <script>
+    const tombol = document.getElementById("tombolKomentar");
+    const komentar = document.getElementById("komentar");
+
+    tombol.addEventListener("click", function () {
+      if (komentar.style.display === "none") {
+        komentar.style.display = "block";
+        tombol.textContent = "Sembunyikan Komentar";
+      } else {
+        komentar.style.display = "none";
+        tombol.textContent = "Tampilkan Komentar";
+      }
+    });
+  </script>
+</body>
+</html>
